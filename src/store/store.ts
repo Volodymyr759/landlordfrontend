@@ -1,7 +1,11 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import agreementReducer from './agreement/AgreementSlice';
 import userReducer from './users/UserSlice';
+import stepReducer from './steps/StepSlice';
 
 const rootReducer = combineReducers({
+    agreementReducer,
+    stepReducer,
     userReducer
 })
 

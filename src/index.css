@@ -1,5 +1,5 @@
 
-a, h1, label, p, span {
+a, h1, h2, h3, h4, h5, label, p, span {
   font-family: 'Circular Std';
 }
 
@@ -62,4 +62,8 @@ a, h1, label, p, span {
   font-style: italic;
   font-weight: 900;
   src: local('Circular Std'), url('https://fonts.cdnfonts.com/s/15011/CircularStd-BlackItalic.woff') format('woff');
+}
+
+.App {
+  background-color: #f4f0e9;
 }
