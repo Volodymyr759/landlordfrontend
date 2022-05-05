@@ -4,11 +4,11 @@ const MainPage = () => {
     return (
         <div>
             <h1>Main page</h1>
-            <Link to="/error">Test the Error-page</Link>
-            <br />
-            <Link to="/link-expired">Test the Expired-page</Link>
-            <br />
-            <Link to="/users">Test the UsersList-component</Link>
+            <span>Test the Error page sending wrong code: </span><Link to="/WRONGCODE">/WRONGCODE</Link>
+            <br /><br />
+            <span>Test the Expired page sending expired code: </span><Link to="/EXPIREDCODE">/EXPIREDCODE</Link>
+            <br /><br />
+            <span>Test the start step-by-step process sending actual code: </span><Link to="/ACTUALCODE">/ACTUALCODE</Link>
         </div>
     );
 };
