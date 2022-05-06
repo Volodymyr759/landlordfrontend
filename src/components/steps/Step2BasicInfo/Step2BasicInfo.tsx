@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { getAgreementAxios } from '../../../networking/agreement';
 import { getAgreement } from '../../../store/agreement/ActionCreators';
 import { useAppDispatch, useAppSelector } from '../../../store/redux';
@@ -7,14 +8,15 @@ import { incrementStep } from '../../../store/steps/ActionCreators';
 const Step2BasicInfo = () => {
     const dispatch = useAppDispatch();
     const { agreement, isLoading, error } = useAppSelector(state => state.agreementReducer);
-
+    const location = useLocation();
+    
     useEffect(() => {
-        dispatch(getAgreement());
+        dispatch(getAgreement(location.pathname.substring(1, location.pathname.length)));
     }, [])
 
     setTimeout(() => {
         console.log('agreement', agreement);
-    }, 3000);
+    }, 1000);
 
     return (
         <>
