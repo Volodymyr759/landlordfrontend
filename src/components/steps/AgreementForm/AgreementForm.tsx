@@ -3,6 +3,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useAppSelector } from '../../../store/redux';
 import { Step1Welcome } from '../Step1Welcome/Step1Welcome';
 import Step2BasicInfo from '../Step2BasicInfo/Step2BasicInfo';
+import Step3ContentExplanation from '../step3ContentExplanation/step3ContentExplanation';
+import Step4ButtonsExplanation from '../step4ButtonsExplanation/step4ButtonsExplanation';
 
 const AgreementForm = () => {
     const location = useLocation();
@@ -27,13 +29,15 @@ const AgreementForm = () => {
             return (<Step1Welcome />)
         case 2:
             return (<Step2BasicInfo />)
+        case 3:
+            return (<Step3ContentExplanation />)
+        case 4:
+            return (<Step4ButtonsExplanation />)
         default:
             return (
                 <div>
-                    {/* <h1>Agreement form</h1>
-                    <p> Code is: {userCode}</p> */}
+                    <h1>Last step</h1>
                 </div>
-
             );
     }
 };

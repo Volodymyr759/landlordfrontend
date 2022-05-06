@@ -1,6 +1,13 @@
-
-a, h1, h2, h3, h4, h5, label, p, span {
-  font-family: 'Circular Std';
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+label,
+p,
+span {
+  font-family: "Circular Std";
 }
 
 @keyframes App-logo-float {
@@ -16,54 +23,114 @@ a, h1, h2, h3, h4, h5, label, p, span {
 }
 
 @font-face {
-  font-family: 'Circular Std';
+  font-family: "Circular Std";
   font-style: normal;
   font-weight: 450;
-  src: local('Circular Std'), url('https://fonts.cdnfonts.com/s/15011/CircularStd-Book.woff') format('woff');
+  src: local("Circular Std"),
+    url("https://fonts.cdnfonts.com/s/15011/CircularStd-Book.woff")
+      format("woff");
 }
 @font-face {
-  font-family: 'Circular Std';
+  font-family: "Circular Std";
   font-style: italic;
   font-weight: 450;
-  src: local('Circular Std'), url('https://fonts.cdnfonts.com/s/15011/CircularStd-BookItalic.woff') format('woff');
+  src: local("Circular Std"),
+    url("https://fonts.cdnfonts.com/s/15011/CircularStd-BookItalic.woff")
+      format("woff");
 }
 @font-face {
-  font-family: 'Circular Std';
+  font-family: "Circular Std";
   font-style: normal;
   font-weight: 500;
-  src: local('Circular Std'), url('https://fonts.cdnfonts.com/s/15011/CircularStd-Medium.woff') format('woff');
+  src: local("Circular Std"),
+    url("https://fonts.cdnfonts.com/s/15011/CircularStd-Medium.woff")
+      format("woff");
 }
 @font-face {
-  font-family: 'Circular Std';
+  font-family: "Circular Std";
   font-style: italic;
   font-weight: 500;
-  src: local('Circular Std'), url('https://fonts.cdnfonts.com/s/15011/CircularStd-MediumItalic.woff') format('woff');
+  src: local("Circular Std"),
+    url("https://fonts.cdnfonts.com/s/15011/CircularStd-MediumItalic.woff")
+      format("woff");
 }
 @font-face {
-  font-family: 'Circular Std';
+  font-family: "Circular Std";
   font-style: normal;
   font-weight: 700;
-  src: local('Circular Std'), url('https://fonts.cdnfonts.com/s/15011/CircularStd-Bold.woff') format('woff');
+  src: local("Circular Std"),
+    url("https://fonts.cdnfonts.com/s/15011/CircularStd-Bold.woff")
+      format("woff");
 }
 @font-face {
-  font-family: 'Circular Std';
+  font-family: "Circular Std";
   font-style: italic;
   font-weight: 700;
-  src: local('Circular Std'), url('https://fonts.cdnfonts.com/s/15011/CircularStd-BoldItalic.woff') format('woff');
+  src: local("Circular Std"),
+    url("https://fonts.cdnfonts.com/s/15011/CircularStd-BoldItalic.woff")
+      format("woff");
 }
 @font-face {
-  font-family: 'Circular Std';
+  font-family: "Circular Std";
   font-style: normal;
   font-weight: 900;
-  src: local('Circular Std'), url('https://fonts.cdnfonts.com/s/15011/CircularStd-Black.woff') format('woff');
+  src: local("Circular Std"),
+    url("https://fonts.cdnfonts.com/s/15011/CircularStd-Black.woff")
+      format("woff");
 }
 @font-face {
-  font-family: 'Circular Std';
+  font-family: "Circular Std";
   font-style: italic;
   font-weight: 900;
-  src: local('Circular Std'), url('https://fonts.cdnfonts.com/s/15011/CircularStd-BlackItalic.woff') format('woff');
+  src: local("Circular Std"),
+    url("https://fonts.cdnfonts.com/s/15011/CircularStd-BlackItalic.woff")
+      format("woff");
 }
 
-.App {
+body {
+  margin: 0;
+}
+
+#root {
   background-color: #f4f0e9;
+}
+
+.error-h1 {
+  color: #f93a73;
+  line-height: 1;
+  font-family: "Circular Std";
+  font-size: 170px;
+  font-weight: 700;
+  margin: 0.33rem 0;
+}
+
+.error-h2 {
+  color: #f93a73;
+  line-height: 1;
+  font-family: "Circular Std";
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.h2-primary {
+  color: #f93a73;
+  font-family: "Circular Std";
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0em;
+}
+
+.p-regular {
+  font-family: Circular Std;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #f93a73 !important;
+  border-radius: 32px !important;
 }
