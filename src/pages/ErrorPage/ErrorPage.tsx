@@ -1,5 +1,6 @@
 import Card from '@mui/material/Card';
 import Grid from '@mui/material/Grid';
+import { Htag } from '../../components/HTag/HTag';
 import '../../index.css';
 
 const ErrorPage = () => (
@@ -13,9 +14,9 @@ const ErrorPage = () => (
             style={{ 'minHeight': '100vh' }}
         >
             <Grid item xs={3}>
-                <Card style={{ 'backgroundColor': 'transparent', 'boxShadow': 'none', 'textAlign': 'center' }}>
-                    <h1 className='error-h1'>404</h1>
-                    <h2 className='error-h2'>Not Found</h2>
+                <Card style={{ 'backgroundColor': 'transparent', 'boxShadow': 'none' }}>
+                    <Htag appearance='h1-primary-large'>404</Htag>
+                    <Htag appearance='h2-primary-centered'>Not Found</Htag>
                 </Card>
             </Grid>
         </Grid>
