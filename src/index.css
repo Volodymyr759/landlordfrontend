@@ -95,32 +95,6 @@ body {
   background-color: #f4f0e9;
 }
 
-.error-h1 {
-  color: #f93a73;
-  line-height: 1;
-  font-family: "Circular Std";
-  font-size: 170px;
-  font-weight: 700;
-  margin: 0.33rem 0;
-}
-
-.error-h2 {
-  color: #f93a73;
-  line-height: 1;
-  font-family: "Circular Std";
-  font-size: 25px;
-  font-weight: 500;
-}
-
-.h2-primary {
-  color: #f93a73;
-  font-family: "Circular Std";
-  font-size: 25px;
-  font-weight: 700;
-  line-height: 32px;
-  letter-spacing: 0em;
-}
-
 .p-regular {
   font-family: Circular Std;
   font-size: 19px;
@@ -128,9 +102,4 @@ body {
   line-height: 24px;
   letter-spacing: 0em;
   text-align: center;
-}
-
-.btn-primary {
-  background-color: #f93a73 !important;
-  border-radius: 32px !important;
 }

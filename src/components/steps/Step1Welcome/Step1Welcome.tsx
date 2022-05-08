@@ -1,17 +1,17 @@
-import { Button, Card, Grid } from '@mui/material';
+import { Card, Grid } from '@mui/material';
 import { useAppDispatch } from '../../../store/redux';
 import { incrementStep } from '../../../store/steps/ActionCreators';
 import '../../../index.css';
+import { Htag } from '../../HTag/HTag';
+import { MuiButton } from '../../MuiButton/MuiButton';
+import { MuiGrid } from '../../MuiGrid/MuiGrid';
 
 export const Step1Welcome = () => {
     const dispatch = useAppDispatch();
 
     return (
         <>
-            <Grid
-                container
-                style={{ 'backgroundColor': 'white' }}
-            >
+            <MuiGrid appearance='grid-white'>
                 <Grid item xs={12}>
                     <Card style={{ 'backgroundColor': 'transparent', 'boxShadow': 'none', 'textAlign': 'center', 'margin': '58px 0' }}>
                         <img src="/images/Logo_PS.svg" alt="Logo" />
@@ -19,8 +19,9 @@ export const Step1Welcome = () => {
                 </Grid>
                 <Grid item xs={12}>
                     <Card style={{ 'backgroundColor': 'transparent', 'boxShadow': 'none', 'textAlign': 'center', 'padding': '0 20px' }}>
-                        <h2 className='h2-primary'>Welcomes to your</h2>
+                        <Htag appearance='h2-primary'>Welcomes to your</Htag>
                         <p className='p-regular'>Residential Exclusive Management Agency Agreement</p>
+                        <p>Residential Exclusive Management Agency Agreement</p>
                     </Card>
                 </Grid>
                 <Grid item xs={12}>
@@ -28,23 +29,19 @@ export const Step1Welcome = () => {
                         <img src="/images/step1_group1.svg" alt="Group" />
                     </Card>
                 </Grid>
-
-            </Grid >
-            <Grid container style={{'backgroundColor': '#E5E5E5'}}>
+            </MuiGrid>
+            <MuiGrid appearance='grid-light-gray'>
                 <Grid item xs={12}>
                     <Card style={{ 'backgroundColor': 'transparent', 'boxShadow': 'none', 'textAlign': 'center', 'margin': '20px 0' }}>
-                        <Button
-                            variant="contained"
-                            color="primary"
-                            className="btn-primary"
-                            style={{ 'width': '170px', 'height': '39px' }}
+                        <MuiButton
+                            appearance="btn-primary"
                             onClick={() => dispatch(incrementStep())}
                         >
                             OK
-                        </Button>
+                        </MuiButton>
                     </Card>
                 </Grid>
-            </Grid >
+            </MuiGrid>
         </>
     );
 };
