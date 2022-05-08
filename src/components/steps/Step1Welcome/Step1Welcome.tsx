@@ -3,8 +3,8 @@ import { useAppDispatch } from '../../../store/redux';
 import { incrementStep } from '../../../store/steps/ActionCreators';
 import '../../../index.css';
 import { Htag } from '../../HTag/HTag';
-import { MuiButton } from '../../MuiButton/MuiButton';
 import { MuiGrid } from '../../MuiGrid/MuiGrid';
+import { FooterOneBtn } from '../../Footers/FooterOneBtn/FooterOneBtn';
 
 export const Step1Welcome = () => {
     const dispatch = useAppDispatch();
@@ -30,18 +30,7 @@ export const Step1Welcome = () => {
                     </Card>
                 </Grid>
             </MuiGrid>
-            <MuiGrid appearance='grid-light-gray'>
-                <Grid item xs={12}>
-                    <Card style={{ 'backgroundColor': 'transparent', 'boxShadow': 'none', 'textAlign': 'center', 'margin': '20px 0' }}>
-                        <MuiButton
-                            appearance="btn-primary"
-                            onClick={() => dispatch(incrementStep())}
-                        >
-                            OK
-                        </MuiButton>
-                    </Card>
-                </Grid>
-            </MuiGrid>
+            <FooterOneBtn appearance='light-gray-box' onClick={() => dispatch(incrementStep())} />
         </>
     );
 };
