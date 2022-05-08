@@ -1,0 +1,13 @@
+.step-grid-box {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.white-box {
+    background-color: white;
+}
+
+.light-gray-box {
+    background-color: #F7F7F7;
+}
