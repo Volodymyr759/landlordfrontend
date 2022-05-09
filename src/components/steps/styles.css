@@ -1,0 +1,99 @@
+.image-wrapper {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  margin: 58px 0 !important;
+}
+
+.content-wrapper {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  padding: 0 20px;
+}
+
+.white-content-wrapper {
+  background-color: white !important;
+  box-shadow: 0px 2px 10px 5px rgba(0, 0, 0, 0.05) !important;
+  border-radius: 5px;
+  margin: 20px 16px;
+  padding: 30px 0;
+}
+
+.dark-gray-content-wrapper {
+  background-color: #f7f7f7 !important;
+  border-radius: 17px !important;
+  margin: 20px 16px;
+  padding: 30px 0;
+}
+
+.p-regular {
+  font-family: Circular Std;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  margin: 20px 16px;
+}
+
+.p-primary {
+  font-family: Circular Std;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #f93a73;
+}
+
+.p-bold {
+  font-family: Circular Std;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+}
+
+.p-bold-small {
+  font-family: Circular Std;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.p-gray {
+  font-family: Circular Std;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  margin: 20px 0 0 16px;
+  color: #98a9bc;
+}
+
+.p-gray-small {
+  font-family: Circular Std;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  color: #98a9bc;
+}
+
+.p-gray-small-bold {
+  font-family: Circular Std;
+  font-size: 16px;
+  font-weight: 700, bold;
+  line-height: 20px;
+  letter-spacing: 0em;
+  color: #98a9bc;
+}
+
+.p-small-blue {
+  font-family: Circular Std;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  color: #4D7CFE;
+  margin: 25px 60px;
+}

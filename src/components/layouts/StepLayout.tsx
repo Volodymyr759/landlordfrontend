@@ -1,5 +1,6 @@
 import { Container } from '@mui/material';
 import React, { FC } from 'react';
+import './styles.css';
 
 type Props = {
     children: React.ReactNode;
@@ -7,11 +8,10 @@ type Props = {
 
 const StepLayout: FC<Props> = ({ children }) => {
     return (
-        <Container maxWidth="xl" style={{
-            'backgroundColor': 'transparent',
-            'minHeight': '722px',
-            'maxWidth': '991px'
-        }}>
+        <Container 
+        // maxWidth="xl" 
+        className="step-layout-container"
+        >
             {children}
         </Container>
     );
