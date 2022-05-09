@@ -8,13 +8,7 @@ type Props = {
 
 const MainLayout: FC<Props> = ({ children }) => {
     return (
-        <Container maxWidth="xl" style={{
-            'backgroundColor': 'white',
-            'minHeight': '722px',
-            'backgroundImage': 'url(https://s3propertyspace-dev.s3.eu-central-1.amazonaws.com/builds/ps_lease/1650555570/static/media/error-bg.99c52ecf.svg)',
-            'backgroundRepeat': 'no-repeat',
-            'maxWidth': '991px'
-        }}>
+        <Container maxWidth="md" className='main-layout-container' >
             <Grid item xs={12}>
                 <img
                     src='https://s3propertyspace-dev.s3.eu-central-1.amazonaws.com/builds/ps_lease/1650555570/static/media/logo-with-text.55fc870d.svg'

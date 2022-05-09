@@ -2,13 +2,13 @@ import { FC } from 'react';
 import { BrowserRouter, Route, Routes, } from 'react-router-dom';
 import './index.css';
 import UsersList from './components/users/UsersList';
-import ErrorPage from './pages/ErrorPage/ErrorPage';
-import ExpiredPage from './pages/ExpiredPage/ExpiredPage';
-import MainPage from './pages/MainPage/MainPage';
-import AgreementForm from './components/steps/AgreementForm/AgreementForm';
+import ErrorPage from './pages/ErrorPage';
+import ExpiredPage from './pages/ExpiredPage';
+import MainPage from './pages/MainPage';
+import AgreementForm from './components/steps/AgreementForm';
 import { BASE_URL, ERROR_PAGE, LINK_EXPIRED_PAGE, START_PAGE } from './path';
-import MainLayout from './components/layouts/MainLayout/MainLayout';
-import StepLayout from './components/layouts/StepLayout/StepLayout';
+import MainLayout from './components/layouts/MainLayout';
+import StepLayout from './components/layouts/StepLayout';
 
 export const App: FC = () => {
   return (

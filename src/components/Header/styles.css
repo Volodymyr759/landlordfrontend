@@ -4,6 +4,9 @@
   justify-items: center;
   align-items: center;
   height: 62px;
+  background-color: white;
+  width: 100%;
+  padding: 0 15px;
 }
 
 .step-header > img {

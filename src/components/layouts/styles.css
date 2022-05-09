@@ -1,0 +1,19 @@
+.main-layout-container {
+  background-color: white;
+  background-image: url(https://s3propertyspace-dev.s3.eu-central-1.amazonaws.com/builds/ps_lease/1650555570/static/media/error-bg.99c52ecf.svg);
+  background-repeat: no-repeat;
+
+  min-height: 722px;
+  /* min-width: 991px; */
+  margin: 0 40px;
+}
+
+.step-layout-container {
+  background-color: transparent;
+  padding: 0 !important;
+  min-height: 722px;
+}
+
+.logo {
+  margin: 10px 0;
+}

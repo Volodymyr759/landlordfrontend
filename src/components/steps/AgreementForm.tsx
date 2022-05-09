@@ -1,10 +1,12 @@
 import { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { useAppSelector } from '../../../store/redux';
-import { Step1Welcome } from '../Step1Welcome/Step1Welcome';
-import Step2BasicInfo from '../Step2BasicInfo/Step2BasicInfo';
-import Step3ContentExplanation from '../step3ContentExplanation/step3ContentExplanation';
-import Step4ButtonsExplanation from '../step4ButtonsExplanation/step4ButtonsExplanation';
+import { ERROR_PAGE, LINK_EXPIRED_PAGE } from '../../path';
+import { useAppSelector } from '../../store/redux';
+import { Step1Welcome } from './Step1Welcome';
+import { Step2BasicInfo } from './Step2BasicInfo';
+import { Step3ContentExplanation } from './Step3ContentExplanation';
+import { Step4ButtonsExplanation } from './Step4ButtonsExplanation';
+import { Step5LandlordAgencyInfo } from './Step5LandlordAgencyInfo';
 
 const AgreementForm = () => {
     const location = useLocation();
@@ -15,11 +17,11 @@ const AgreementForm = () => {
 
     useEffect(() => {
         if (userCode === 'WRONGCODE') {
-            navigate("/error");
+            navigate(ERROR_PAGE);
             return;
         }
         if (userCode === 'EXPIREDCODE') {
-            navigate("/link-expired");
+            navigate(LINK_EXPIRED_PAGE);
             return;
         }
     }, [userCode])
@@ -33,6 +35,8 @@ const AgreementForm = () => {
             return (<Step3ContentExplanation />)
         case 4:
             return (<Step4ButtonsExplanation />)
+        case 5:
+            return (<Step5LandlordAgencyInfo />)
         default:
             return (
                 <div>
