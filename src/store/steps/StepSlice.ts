@@ -14,6 +14,9 @@ export const stepSlice = createSlice({
         },
         decrement(state) {
             state.stepNumber -= 1;
+        },
+        setDefault(state) {
+            state.stepNumber = 1;
         }
     }
 })

@@ -8,6 +8,7 @@ label,
 p,
 span {
   font-family: "Circular Std";
+  color: #343F4D;
 }
 
 @keyframes App-logo-float {
@@ -87,8 +88,9 @@ span {
       format("woff");
 }
 
-body {
+body, html {
   margin: 0;
+  padding: 0;
 }
 
 #root {

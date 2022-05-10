@@ -19,7 +19,7 @@ export const Step1Welcome = () => {
                 <Grid item xs={12}>
                     <Card className="content-wrapper text-centered">
                         <h2 className='text-primary'>Welcomes to your</h2>
-                        <p className='p-regular text-centered'>Residential Exclusive Management Agency Agreement</p>
+                        <p className='p-regular'>Residential Exclusive Management Agency Agreement</p>
                     </Card>
                 </Grid>
                 <Grid item xs={12}>

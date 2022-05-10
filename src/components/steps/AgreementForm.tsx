@@ -7,6 +7,11 @@ import { Step2BasicInfo } from './Step2BasicInfo';
 import { Step3ContentExplanation } from './Step3ContentExplanation';
 import { Step4ButtonsExplanation } from './Step4ButtonsExplanation';
 import { Step5LandlordAgencyInfo } from './Step5LandlordAgencyInfo';
+import { Step6RightsDuties } from './Step6RightsDuties';
+import { Step7TermsConditions } from './Step7TermsConditions';
+import { Step8InspectionReport } from './Step8InspectionReport';
+import { Step9Signature } from './Step9Signature';
+import { Step10Congrats } from './Step10Congrats';
 
 const AgreementForm = () => {
     const location = useLocation();
@@ -37,12 +42,16 @@ const AgreementForm = () => {
             return (<Step4ButtonsExplanation />)
         case 5:
             return (<Step5LandlordAgencyInfo />)
+        case 6:
+            return (<Step6RightsDuties />)
+        case 7:
+            return (<Step7TermsConditions />)
+        case 8:
+            return (<Step8InspectionReport />)
+        case 9:
+            return (<Step9Signature />)
         default:
-            return (
-                <div>
-                    <h1>Last step</h1>
-                </div>
-            );
+            return (<Step10Congrats />);
     }
 };
 
