@@ -26,7 +26,6 @@
 }
 
 .p-regular {
-  font-family: Circular Std;
   font-size: 19px;
   font-weight: 400;
   line-height: 24px;
@@ -34,8 +33,14 @@
   margin: 20px 16px;
 }
 
+.p-regular-nomargin {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
+
 .p-primary {
-  font-family: Circular Std;
   font-size: 19px;
   font-weight: 700;
   line-height: 33px;
@@ -45,7 +50,6 @@
 }
 
 .p-bold {
-  font-family: Circular Std;
   font-size: 19px;
   font-weight: 700;
   line-height: 29px;
@@ -53,7 +57,6 @@
 }
 
 .p-bold-small {
-  font-family: Circular Std;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -61,7 +64,6 @@
 }
 
 .p-gray {
-  font-family: Circular Std;
   font-size: 19px;
   font-weight: 400;
   line-height: 24px;
@@ -71,7 +73,6 @@
 }
 
 .p-gray-small {
-  font-family: Circular Std;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -80,7 +81,6 @@
 }
 
 .p-gray-small-bold {
-  font-family: Circular Std;
   font-size: 16px;
   font-weight: 700, bold;
   line-height: 20px;
@@ -89,11 +89,19 @@
 }
 
 .p-small-blue {
-  font-family: Circular Std;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
   letter-spacing: 0em;
   color: #4D7CFE;
   margin: 25px 60px;
+}
+
+.p-small-blue-minmargin {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  color: #4D7CFE;
+  margin: 0 16px;
 }

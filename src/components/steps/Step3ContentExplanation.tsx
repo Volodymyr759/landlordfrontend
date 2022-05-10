@@ -4,6 +4,7 @@ import { incrementStep, decrementStep } from '../../store/steps/ActionCreators';
 import { FooterOneBtn } from '../Footers/FooterOneBtn/FooterOneBtn';
 import { Header } from '../Header/Header';
 import { MuiGrid } from '../MuiGrid/MuiGrid';
+import "./styles.css";
 
 export const Step3ContentExplanation = () => {
     const dispatch = useAppDispatch();

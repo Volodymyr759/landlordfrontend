@@ -1,4 +1,3 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Button } from './Button';
@@ -16,8 +15,8 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 export const Primary = Template.bind({});
 
 Primary.args = {
-    appearance: 'primary',
-    children: 'OK'
+  appearance: 'primary',
+  children: 'OK'
 };
 
 export const Secondary = Template.bind({});

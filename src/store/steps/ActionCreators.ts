@@ -8,3 +8,7 @@ export const incrementStep = () => (dispatch: AppDispatch) => {
 export const decrementStep = () => (dispatch: AppDispatch) => {
     dispatch(stepSlice.actions.decrement());
 }
+
+export const setDefault = () => (dispatch: AppDispatch) => {
+    dispatch(stepSlice.actions.setDefault());
+}
