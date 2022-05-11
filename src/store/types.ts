@@ -1,9 +1,3 @@
-export interface IUser {
-    id: number;
-    name: string;
-    email: string;
-}
-
 export interface IAgreement {
     id: string;
     agency_id: string;

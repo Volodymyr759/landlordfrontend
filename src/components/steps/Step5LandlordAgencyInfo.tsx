@@ -55,10 +55,10 @@ export const Step5LandlordAgencyInfo = () => {
                 <Card className="white-content-wrapper text-centered" >
                     <p><img src="/images/identification-card_2.svg" alt="Identification Card" /></p>
                     {principalItems.map(item => (
-                        <p key={item.title} >
+                        <div key={item.title} >
                             <p className='p-small-blue'>{item.title}</p>
                             <p className='p-regular'>{item.text}</p>
-                        </p>
+                        </div>
                     ))}
                 </Card>
             </Grid>
@@ -67,10 +67,10 @@ export const Step5LandlordAgencyInfo = () => {
                 <Card className="white-content-wrapper text-centered" >
                     <p><img src="/images/identification-card_2.svg" alt="Identification Card" /></p>
                     {licenseeItems.map(item => (
-                        <p key={item.title} >
+                        <div key={item.title} >
                             <p className='p-small-blue'>{item.title}</p>
                             <p className='p-regular'>{item.text}</p>
-                        </p>
+                        </div>
                     ))}
                 </Card>
             </Grid>

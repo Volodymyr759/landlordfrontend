@@ -41,8 +41,7 @@ export const Step8InspectionReport = () => {
                         </AccordionSummary>
                         <AccordionDetails>
                             <p className='p-regular-nomargin'>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                sit amet blandit leo lobortis eget.
+                                The property looks in good condition. It was built in 1972.
                             </p>
                             <div className='p-regular-nomargin text-centered'>
                                 <Button
