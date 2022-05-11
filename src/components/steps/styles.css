@@ -56,6 +56,14 @@
   letter-spacing: 0em;
 }
 
+.p-bold-numeric {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  margin: 4px 16px;
+}
+
 .p-bold-small {
   font-style: normal;
   font-weight: 700;
@@ -93,7 +101,7 @@
   font-weight: 400;
   line-height: 18px;
   letter-spacing: 0em;
-  color: #4D7CFE;
+  color: #4d7cfe;
   margin: 25px 60px;
 }
 
@@ -102,12 +110,12 @@
   font-weight: 400;
   line-height: 18px;
   letter-spacing: 0em;
-  color: #4D7CFE;
+  color: #4d7cfe;
   margin: 0 16px;
 }
 
 .list-item {
-  min-width: 20px !important; 
-  padding-top: 3px !important; 
+  min-width: 20px !important;
+  padding-top: 3px !important;
   margin-top: 0 !important;
 }
