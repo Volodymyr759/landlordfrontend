@@ -5,11 +5,13 @@ import { incrementStep, decrementStep } from '../../store/steps/ActionCreators';
 import { MuiGrid } from '../MuiGrid/MuiGrid';
 import { FooterTwoBtn } from '../Footers/FooterTwoBtn/FooterTwoBtn';
 import { Header } from '../Header/Header';
+import { MuiStepper } from '../MuiStepper/MuiStepper';
 import "./styles.css";
 
 export const Step5LandlordAgencyInfo = () => {
     const dispatch = useAppDispatch();
     const { agreement } = useAppSelector(state => state.agreementReducer);
+    const { stepNumber } = useAppSelector(state => state.stepReducer);
     const [open, setOpen] = useState<boolean>(false);
 
     const principalItems = [
@@ -50,6 +52,7 @@ export const Step5LandlordAgencyInfo = () => {
                 onPhone={() => setOpen(true)}
             />
             <Snackbar open={open} message='onPhone function is not implemented yet' autoHideDuration={5000} onClose={handleClose} />
+            <MuiStepper activeStep={stepNumber - 5} />
             <p className='p-gray'>PART 1: The particulars / Principal</p>
             <Grid item xs={12}>
                 <Card className="white-content-wrapper text-centered" >

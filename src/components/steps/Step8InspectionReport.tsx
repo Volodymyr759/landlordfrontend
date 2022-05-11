@@ -1,17 +1,20 @@
-import { Accordion, AccordionDetails, AccordionSummary, Card, Grid, List, ListItem, ListItemIcon, ListItemText, Snackbar } from '@mui/material';
+import { useState } from 'react';
+import { Accordion, AccordionDetails, AccordionSummary, Card, Grid, Snackbar } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useAppDispatch, useAppSelector } from '../../store/redux';
 import { incrementStep, decrementStep } from '../../store/steps/ActionCreators';
 import { FooterTwoBtn } from '../Footers/FooterTwoBtn/FooterTwoBtn';
 import { Header } from '../Header/Header';
 import { MuiGrid } from '../MuiGrid/MuiGrid';
-import "./styles.css";
 import { Button } from '../Button/Button';
-import { useState } from 'react';
+import { MuiStepper } from '../MuiStepper/MuiStepper';
+import "./styles.css";
+
 
 export const Step8InspectionReport = () => {
     const dispatch = useAppDispatch();
     const { agreement } = useAppSelector(state => state.agreementReducer);
+    const { stepNumber } = useAppSelector(state => state.stepReducer);
     const [open, setOpen] = useState<boolean>(false);
 
     const handleClose = (event?: React.SyntheticEvent | Event, reason?: string) => {
@@ -27,6 +30,7 @@ export const Step8InspectionReport = () => {
                 onGoBack={() => dispatch(decrementStep())}
                 onPhone={() => console.log('onPhone is not implemented yet')}
             />
+            <MuiStepper activeStep={stepNumber - 5} />
             <p className='p-gray'>Propery inspection report</p>
             <Grid item xs={12}>
                 <Card className="white-content-wrapper" >
