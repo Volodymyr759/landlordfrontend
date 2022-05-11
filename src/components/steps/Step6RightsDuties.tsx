@@ -127,14 +127,14 @@ export const Step6RightsDuties = () => {
             </Grid>
             <p className='p-gray'>I: Terms and conditions of tenancy [Clause 4.2]</p>
             <Grid item xs={12}>
-                <Card className="white-content-wrapper " >
+                <Card className="white-content-wrapper" >
                     <List>
                         {tenancyItems.map(item => (
                             <ListItem
                                 key={item.text}
                                 alignItems="flex-start"
                             >
-                                <ListItemIcon style={{ 'minWidth': '20px', 'alignItems': 'self-start', 'paddingTop': '4px', 'marginTop': '0' }}>
+                                <ListItemIcon className='list-item'>
                                     {item.icon}
                                 </ListItemIcon>
                                 <span className='p-regular-nomargin'>{item.text}</span>

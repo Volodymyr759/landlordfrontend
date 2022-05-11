@@ -13,7 +13,7 @@ import { Step8InspectionReport } from './Step8InspectionReport';
 import { Step9Signature } from './Step9Signature';
 import { Step10Congrats } from './Step10Congrats';
 
-const AgreementForm = () => {
+export const AgreementForm = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const { stepNumber } = useAppSelector(state => state.stepReducer);
@@ -55,4 +55,4 @@ const AgreementForm = () => {
     }
 };
 
-export default AgreementForm;
+// export default AgreementForm;

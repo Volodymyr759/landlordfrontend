@@ -32,12 +32,12 @@ export const Step2BasicInfo = () => {
                 onPhone={() => console.log('onPhone is not implemented yet')}
             />
             <Grid item xs={12}>
-                {isLoading &&
+                {isLoading ? 
                     <Card className="white-content-wrapper text-centered" >
                         <CircularProgress />
                     </Card>
-                }
-                {agreement &&
+                    :
+                    agreement &&
                     <Card className="white-content-wrapper text-centered" >
                         <img src="/images/Info-icon.svg" alt="Info" />
                         <p className='p-regular'>
@@ -63,6 +63,7 @@ export const Step2BasicInfo = () => {
                         <p className='p-gray-small-bold'>terms and conditions</p>
                     </Card>
                 }
+
             </Grid>
             <FooterOneBtn onClick={() => dispatch(incrementStep())} />
         </MuiGrid>
