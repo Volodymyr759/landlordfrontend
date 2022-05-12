@@ -35,7 +35,6 @@ export const Step8InspectionReport = () => {
             <Grid item xs={12}>
                 <Card className="white-content-wrapper" >
                     <p className='text-centered'><img src="/images/check-2_1.svg" alt="Identification Card" /></p>
-                    {/* todo: replace by List if possible due to logic/buttons */}
                     <Accordion>
                         <AccordionSummary
                             key={'accordion1'}

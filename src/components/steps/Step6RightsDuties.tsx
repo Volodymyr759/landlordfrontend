@@ -1,8 +1,9 @@
-import { Card, Grid, List, ListItem, ListItemIcon } from '@mui/material';
+import { Card, Grid } from '@mui/material';
 import { useAppDispatch, useAppSelector } from '../../store/redux';
 import { incrementStep, decrementStep } from '../../store/steps/ActionCreators';
 import { FooterTwoBtn } from '../Footers/FooterTwoBtn/FooterTwoBtn';
 import { Header } from '../Header/Header';
+import { ListCard } from '../ListCard/ListCard';
 import { MuiGrid } from '../MuiGrid/MuiGrid';
 import { MuiStepper } from '../MuiStepper/MuiStepper';
 import "./styles.css";
@@ -13,16 +14,38 @@ export const Step6RightsDuties = () => {
     const { stepNumber } = useAppSelector(state => state.stepReducer);
 
     const dutiesItems = [
-        { text: 'Sign tenancy agreement on behalf of the Principal' },
-        { text: 'Select tenants' },
-        { text: 'Submit tenants to Principal' }
+        {
+            content: <span className='p-regular-nomargin'>
+                Sign tenancy agreement on behalf of the Principal</span>,
+            icon: <div style={{ 'minWidth': '20px' }}><img src="/images/ellipse_16.svg" alt="Ellipse icon" /></div>
+        },
+        {
+            content: <span className='p-regular-nomargin'>All parts of the agreement must be read before signing.</span>,
+            icon: <div style={{ 'minWidth': '20px' }}><img src="/images/ellipse_16.svg" alt="Ellipse icon" /></div>
+        },
+        {
+            content: <span className='p-regular-nomargin'>Submit tenants to Principal</span>,
+            icon: <div style={{ 'minWidth': '20px' }}><img src="/images/ellipse_16.svg" alt="Ellipse icon" /></div>
+        }
     ]
 
     const tenancyItems = [
-        { text: 'its fixed term is to be not less than 48 weeks and not more than 96 Week', icon: <span>a.</span> },
-        { text: 'the rent is to be $600 per week payable in advance', icon: <span>b.</span> },
-        { text: 'a rental bond in a sum equal to 12 weeks rent to be paid', icon: <span>c.</span> },
-        { text: 'the Premises are to be let 12/05/2021', icon: <span>d.</span> }
+        {
+            content: <span className='p-regular-nomargin'>its fixed term is to be not less than <b>48 weeks</b> and not more than <b>96 Week</b></span>,
+            icon: <span>a.</span>
+        },
+        {
+            content: <span className='p-regular-nomargin'>the rent is to be <b>$600 per week</b> payable in advance</span>,
+            icon: <span>b.</span>
+        },
+        {
+            content: <span className='p-regular-nomargin'>a rental bond in a sum equal to <b>12 weeks</b> rent to be paid</span>,
+            icon: <span>c.</span>
+        },
+        {
+            content: <span className='p-regular-nomargin'>the Premises are to be let <b>12/05/2021</b></span>,
+            icon: <span>d.</span>
+        }
     ]
 
     const remunerationItems = [
@@ -108,23 +131,10 @@ export const Step6RightsDuties = () => {
                         The Principal authorises the Licensee, on behalf of the Principal, from time to time to carry out the duties
                         as set out in Clause 4.1 (a-m inclusive) of Part 2 of this Agreement and for each tenancy to:
                     </p>
-                    <List>
-                        {
-                            dutiesItems.map(item => (
-                                <ListItem
-                                    key={item.text}
-                                >
-                                    <ListItemIcon style={{ 'minWidth': '20px' }}>
-                                        <img src="/images/ellipse_16.svg" alt="Ellipse icon" />
-                                    </ListItemIcon>
-                                    <span className='p-regular-nomargin'>{item.text}</span>
-                                </ListItem>
-                            ))
-                        }
-                    </List>
+                    <ListCard items={dutiesItems} />
                 </Card>
             </Grid>
-            <p className='p-gray'>C: Licensee's renumaration [clauses 2.1 & 2.2]</p>
+            <p className='p-gray'>C: Licensee's remuneration [clauses 2.1 & 2.2]</p>
             <Grid item xs={12}>
                 <Card className="white-content-wrapper" >
                     <Grid container >
@@ -204,19 +214,7 @@ export const Step6RightsDuties = () => {
             <p className='p-gray'>I: Terms and conditions of tenancy [Clause 4.2]</p>
             <Grid item xs={12}>
                 <Card className="white-content-wrapper" >
-                    <List>
-                        {tenancyItems.map(item => (
-                            <ListItem
-                                key={item.text}
-                                alignItems="flex-start"
-                            >
-                                <ListItemIcon className='list-item'>
-                                    {item.icon}
-                                </ListItemIcon>
-                                <span className='p-regular-nomargin'>{item.text}</span>
-                            </ListItem>
-                        ))}
-                    </List>
+                    <ListCard items={tenancyItems} />
                 </Card>
             </Grid>
             <p className='p-gray'>J: Principal´s outgoings ["the Principal's Outgoings"] [Clause 5.1]</p>
@@ -231,7 +229,7 @@ export const Step6RightsDuties = () => {
                                         <img src="/images/green_ellipse.svg" alt='Green Ellipse' style={{ 'position': 'absolute', 'top': '0', 'right': '4px' }} />
                                     }
                                 </p>
-                                <p className='p-regular'>John Smith</p>
+                                <p className='p-regular'>{item.text}</p>
                             </Grid>
                         ))}
                         <p className='p-regular'>
@@ -251,7 +249,7 @@ export const Step6RightsDuties = () => {
                     ))}
                 </Card>
             </Grid>
-            <p className='p-gray'>L: Principal´s outgoings ["the Principal's Outgoings"] [Clause 5.1]</p>
+            <p className='p-gray'>L: Disclosure of Rebates, Discounts and Commissions [Clause 12]</p>
             <Grid item xs={12}>
                 <Card className="white-content-wrapper" >
                     <p className='p-regular'>

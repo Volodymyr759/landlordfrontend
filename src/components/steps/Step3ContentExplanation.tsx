@@ -1,8 +1,9 @@
-import { Card, Grid, List, ListItem, ListItemIcon } from '@mui/material';
+import { Card, Grid } from '@mui/material';
 import { useAppDispatch } from '../../store/redux';
 import { incrementStep, decrementStep } from '../../store/steps/ActionCreators';
 import { FooterOneBtn } from '../Footers/FooterOneBtn/FooterOneBtn';
 import { Header } from '../Header/Header';
+import { ListCard } from '../ListCard/ListCard';
 import { MuiGrid } from '../MuiGrid/MuiGrid';
 import "./styles.css";
 
@@ -10,9 +11,21 @@ export const Step3ContentExplanation = () => {
     const dispatch = useAppDispatch();
 
     const itemsToAgree = [
-        { text: 'This agreement consists of two parts: Part 1 | The Particulars; Part 2 | The Terms and Conditions', icon: <span>1.</span> },
-        { text: 'All parts of the agreement must be read before signing.', icon: <span>2.</span> },
-        { text: 'The Property and Stock Act 2002 and the Property and Stock Agents Regulation 2014 require all agreements to be in writing and contain prescribed terms1', icon: <span>3.</span> }
+        {
+            content: <span className='p-regular-nomargin'>
+                This agreement consists of two parts: Part 1 | The Particulars; Part 2 | The Terms and Conditions'</span>,
+            icon: <span>1.</span>
+        },
+        {
+            content: <span className='p-regular-nomargin'>All parts of the agreement must be read before signing.</span>,
+            icon: <span>2.</span>
+        },
+        {
+            content: <span className='p-regular-nomargin'>
+                The Property and Stock Act 2002 and the Property and Stock Agents Regulation 2014 require all agreements
+                to be in writing and contain prescribed terms1</span>,
+            icon: <span>3.</span>
+        }
     ]
 
     return (
@@ -32,21 +45,7 @@ export const Step3ContentExplanation = () => {
                     <p className='p-small-blue text-centered'>
                         Please read this before completing the residential tenancy agreement (the Agreement).
                     </p>
-                    {/* <p className='p-regular'>1. This agreement consists of two parts: Part 1 | The Particulars; Part 2 | The Terms and Conditions</p>
-                    <p className='p-regular'>2. All parts of the agreement must be read before signing.</p>
-                    <p className='p-regular'>3. The Property and Stock Act 2002 and the Property and Stock Agents Regulation 2014
-                        require all agreements to be in writing and contain prescribed terms1</p> */}
-                    <List>
-                        {itemsToAgree.map(item => (
-                            <ListItem
-                                key={item.text}
-                                alignItems="flex-start"
-                            >
-                                <ListItemIcon className='list-item'>{item.icon}</ListItemIcon>
-                                <span className='p-regular-nomargin'>{item.text}</span>
-                            </ListItem>
-                        ))}
-                    </List>
+                    <ListCard items={itemsToAgree} />
                 </Card>
             </Grid>
             <FooterOneBtn onClick={() => dispatch(incrementStep())} />
