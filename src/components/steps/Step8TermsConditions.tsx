@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Card, Grid } from '@mui/material';
 import { useAppDispatch, useAppSelector } from '../../store/redux';
 import { incrementStep, decrementStep } from '../../store/steps/ActionCreators';
@@ -6,12 +7,27 @@ import { Header } from '../Header/Header';
 import { MuiGrid } from '../MuiGrid/MuiGrid';
 import { ListCard } from '../ListCard/ListCard';
 import { MuiStepper } from '../MuiStepper/MuiStepper';
+import PhoneDialog from '../PhoneDialog/PhoneDialog';
 import "./styles.css";
 
-export const Step7TermsConditions = () => {
+export const Step8TermsConditions = () => {
     const dispatch = useAppDispatch();
     const { agreement } = useAppSelector(state => state.agreementReducer);
     const { stepNumber } = useAppSelector(state => state.stepReducer);
+
+    const [openPhoneDialog, setOpenPhoneDialog] = useState<boolean>(false);
+
+    useEffect(() => {
+        window.scroll(0, 0);
+    }, [])
+
+    const onClickPhone = () => {
+        setOpenPhoneDialog(true);
+    };
+
+    const onClosePhoneDialog = () => {
+        setOpenPhoneDialog(false);
+    };
 
     const definitionsItems = [
         {
@@ -444,7 +460,7 @@ export const Step7TermsConditions = () => {
         },
         {
             content: <span className='p-regular-nomargin'>
-                the residential premises are subject to significant health or safety risks that are not apparent 
+                the residential premises are subject to significant health or safety risks that are not apparent
                 to a reasonable person on inspection of the premises,
             </span>,
             icon: <span>b.</span>
@@ -457,42 +473,42 @@ export const Step7TermsConditions = () => {
         },
         {
             content: <span className='p-regular-nomargin'>
-                the residential premises have been the scene of a serious violent crime within the preceding 5 years, 
+                the residential premises have been the scene of a serious violent crime within the preceding 5 years,
                 Event date reported 12/05/2020
             </span>,
             icon: <span>d.</span>
         },
         {
             content: <span className='p-regular-nomargin'>
-                the residential premises have been used for the purpose of manufacture or cultivation of a prohibited 
+                the residential premises have been used for the purpose of manufacture or cultivation of a prohibited
                 drug or plant within the last 2 years,
             </span>,
             icon: <span>e.</span>
         },
         {
             content: <span className='p-regular-nomargin'>
-                council waste services will be provided to the tenant on a different basis than is generally applicable 
+                council waste services will be provided to the tenant on a different basis than is generally applicable
                 to residential premises within the area of the council,
             </span>,
             icon: <span>f.</span>
         },
         {
             content: <span className='p-regular-nomargin'>
-                that because of the zoning of the land, or other laws applying to development on the land, the tenant 
+                that because of the zoning of the land, or other laws applying to development on the land, the tenant
                 will not be able to obtain a residential parking permit (in an area where only paid parking is provided),
             </span>,
             icon: <span>g.</span>
         },
         {
             content: <span className='p-regular-nomargin'>
-                the existence of a driveway or walkway on the residential premises which other persons are legally entitled 
+                the existence of a driveway or walkway on the residential premises which other persons are legally entitled
                 to share with the tenant.
             </span>,
             icon: <span>h.</span>
         },
         {
             content: <span className='p-regular-nomargin'>
-                if the premises comprise or include a strata lot in a strata scheme where there is scheduled rectification 
+                if the premises comprise or include a strata lot in a strata scheme where there is scheduled rectification
                 work or major repairs to the common property during the fixed term.
             </span>,
             icon: <span>i.</span>
@@ -510,9 +526,9 @@ export const Step7TermsConditions = () => {
         <MuiGrid appearance='grid-light-gray'>
             <Header
                 onGoBack={() => dispatch(decrementStep())}
-                onPhone={() => console.log('onPhone is not implemented yet')}
+                onPhone={onClickPhone}
             />
-            <MuiStepper activeStep={stepNumber - 5} />
+            <MuiStepper activeStep={stepNumber - 6} />
             <p className='p-gray'>PART 2 | Terms and conditions of residential exlusive management agency agreement</p>
             <Grid item xs={12}>
                 <Card className="white-content-wrapper" >
@@ -597,14 +613,15 @@ export const Step7TermsConditions = () => {
                 </Card>
             </Grid>
             <FooterTwoBtn
-                onAgree={() => {
-                    console.log('onAgre function is not implemented yet');
-                    dispatch(incrementStep());
-                }}
-                onDisagree={() => {
-                    console.log('onDisagree function is not implemented yet');
-                    dispatch(incrementStep());
-                }}
+                onAgree={() => { dispatch(incrementStep()) }}
+                onDisagree={onClickPhone}
+            />
+            <PhoneDialog
+                isOpen={openPhoneDialog}
+                firstName={agreement?.manager.first_name}
+                lastName={agreement?.manager.last_name}
+                phoneNumber={agreement?.manager.phone_number}
+                onClose={onClosePhoneDialog}
             />
         </MuiGrid>
     );

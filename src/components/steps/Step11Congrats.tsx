@@ -7,7 +7,7 @@ import { FooterOneBtn } from '../Footers/FooterOneBtn/FooterOneBtn';
 import { MuiGrid } from '../MuiGrid/MuiGrid';
 import "./styles.css";
 
-export const Step10Congrats = () => {
+export const Step11Congrats = () => {
     const dispatch = useAppDispatch();
     const { agreement } = useAppSelector(state => state.agreementReducer);
     const navigate = useNavigate();
@@ -33,7 +33,7 @@ export const Step10Congrats = () => {
                     </Card>
                 </Grid>
             </MuiGrid>
-            <FooterOneBtn appearance='light-gray-box' onClick={() => {
+            <FooterOneBtn appearance='light-gray-box' btnText='OK' onClick={() => {
                 console.log('For now sets step=1 and redirects to main page.')
                 dispatch(setDefault())
                 navigate(BASE_URL);

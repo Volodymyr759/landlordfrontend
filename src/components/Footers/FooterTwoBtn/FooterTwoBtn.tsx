@@ -2,21 +2,20 @@ import { Props } from "./types";
 import '../../Footers/styles.css';
 import { Button } from "../../Button/Button";
 
-export const FooterTwoBtn = ({ onAgree, onDisagree }: Props) => {
-    // todo: create media scenario to change width for buttons
+export const FooterTwoBtn = ({ buttonsTitles = ['AGREE', 'DISAGREE'], onAgree, onDisagree }: Props) => {
     return (
         <div className="step-grid-box white-box">
             <Button
                 appearance="primary"
                 onClick={onAgree}
             >
-                AGREE
+                {buttonsTitles[0]}
             </Button>
             <Button
                 appearance="dark"
                 onClick={onDisagree}
             >
-                DISAGREE
+                {buttonsTitles[1]}
             </Button>
         </div>
     );
