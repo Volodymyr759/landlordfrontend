@@ -5,7 +5,12 @@ import { BASE_URL } from '../path';
 import { Button } from '../components/Button/Button';
 import '../index.css';
 
-export const ErrorPage = () => {
+interface Props {
+    status?: string;
+    message?: string;
+}
+
+export const ErrorPage = ({ status = '500', message = 'Internal Server Error' }: Props) => {
     const navigate = useNavigate();
 
     return (
@@ -19,8 +24,8 @@ export const ErrorPage = () => {
         >
             <Grid item xs={3}>
                 <Card className="card-wrapper" >
-                    <h1 className='text-primary-large'>404</h1>
-                    <h2 className='text-primary text-centered'>Not Found</h2>
+                    <h1 className='text-primary-large'>{status}</h1>
+                    <h2 className='text-primary text-centered'>{message}</h2>
                     <p className='text-centered'>
                         <Button
                             appearance='primary'

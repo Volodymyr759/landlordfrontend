@@ -7,6 +7,7 @@ export default {
   component: Button,
   argTypes: {
     appearance: { control: 'text' },
+    btnText: { control: 'Get Started' }
   },
 } as ComponentMeta<typeof Button>;
 

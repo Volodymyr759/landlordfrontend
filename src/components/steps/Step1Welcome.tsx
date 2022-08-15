@@ -28,7 +28,7 @@ export const Step1Welcome = () => {
                     </Card>
                 </Grid>
             </MuiGrid>
-            <FooterOneBtn appearance='light-gray-box' onClick={() => dispatch(incrementStep())} />
+            <FooterOneBtn appearance='light-gray-box' btnText='Get Started' onClick={() => dispatch(incrementStep())} />
         </>
     );
 };

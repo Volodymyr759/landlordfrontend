@@ -24,3 +24,9 @@
   /* PS secondary color */
   background-color: #343f4d;
 }
+
+@media (max-width: 768px) {
+  .btn {
+    width: 120px;
+  }
+}
