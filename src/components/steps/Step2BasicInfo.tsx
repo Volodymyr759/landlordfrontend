@@ -39,7 +39,7 @@ export const Step2BasicInfo = () => {
                         <p className='p-regular'>
                             Hi {agreement.landlord.full_name}, your Residential Exclusive Management Agency Agreement for
                         </p>
-                        <hr style={{ 'width': '100%', 'color': '#E7E8E9', 'fontSize': '1px' }} />
+                        <hr className='h-divider'/>
                         <p className='p-primary'>
                             {agreement.property.address}, {agreement.property.city}
                         </p>

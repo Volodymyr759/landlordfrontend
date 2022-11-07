@@ -16,7 +16,7 @@ const ExpiredPage = () => {
             direction="column"
             alignItems="center"
             justifyItems="center"
-            style={{ 'minHeight': '100vh' }}
+            className="grid-large"
         >
             <Grid item xs={3}>
                 <Card className="card-wrapper text-centered" >

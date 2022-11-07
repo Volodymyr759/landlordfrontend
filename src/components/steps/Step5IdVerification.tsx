@@ -89,7 +89,7 @@ export const Step5IdVerification = () => {
     return (
         <MuiGrid appearance='grid-light-gray'>
             {error &&
-                <div style={{ 'width': '100%' }}>
+                <div style={{ width: '100%' }}>
                     <Alert
                         severity="error"
                         action={
@@ -135,7 +135,8 @@ export const Step5IdVerification = () => {
                             <Button
                                 variant="contained"
                                 component="label"
-                                style={{ 'textTransform': 'none', 'backgroundColor': 'transparent', 'boxShadow': 'none' }}
+                                // className="choose-image-btn"
+                                style={{ textTransform: 'none', backgroundColor: 'transparent', boxShadow: 'none' }}
                             >
                                 <span className='a-small-blue'>Choose from gallery</span>
                                 <input

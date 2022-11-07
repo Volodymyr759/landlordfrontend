@@ -34,15 +34,15 @@ export const Step7RightsDuties = () => {
         {
             content: <span className='p-regular-nomargin'>
                 Sign tenancy agreement on behalf of the Principal</span>,
-            icon: <div style={{ 'minWidth': '20px' }}><img src="/images/ellipse_16.svg" alt="Ellipse icon" /></div>
+            icon: <div className="pink-ellipse-wrapper"><img src="/images/ellipse_16.svg" alt="Ellipse icon" /></div>
         },
         {
             content: <span className='p-regular-nomargin'>All parts of the agreement must be read before signing.</span>,
-            icon: <div style={{ 'minWidth': '20px' }}><img src="/images/ellipse_16.svg" alt="Ellipse icon" /></div>
+            icon: <div className="pink-ellipse-wrapper"><img src="/images/ellipse_16.svg" alt="Ellipse icon" /></div>
         },
         {
             content: <span className='p-regular-nomargin'>Submit tenants to Principal</span>,
-            icon: <div style={{ 'minWidth': '20px' }}><img src="/images/ellipse_16.svg" alt="Ellipse icon" /></div>
+            icon: <div className="pink-ellipse-wrapper"><img src="/images/ellipse_16.svg" alt="Ellipse icon" /></div>
         }
     ]
 
@@ -156,11 +156,11 @@ export const Step7RightsDuties = () => {
                 <Card className="white-content-wrapper" >
                     <Grid container >
                         {remunerationItems.map(item => (
-                            <Grid item xs={6} key={item.text} style={{ 'margin': '7px 0' }} >
+                            <Grid item xs={6} key={item.text} className="blue-header-list-item">
                                 <p className='p-small-blue-minmargin'>{item.text}</p>
                                 <p className='p-bold-numeric'>{item.sum}</p>
                                 {item.note.length > 0 &&
-                                    <p className='p-gray-small' style={{ 'margin': '4px 16px' }}>{item.note}</p>
+                                    <p className='p-gray-small p-gray-small-with-margin'>{item.note}</p>
                                 }
                             </Grid>
                         ))}
@@ -172,11 +172,11 @@ export const Step7RightsDuties = () => {
                 <Card className="white-content-wrapper" >
                     <Grid container >
                         {expencesItems.map(item => (
-                            <Grid item xs={6} key={item.text} style={{ 'margin': '7px 0' }} >
+                            <Grid item xs={6} key={item.text} className="blue-header-list-item">
                                 <p className='p-small-blue-minmargin'>{item.text}</p>
                                 <p className='p-bold-numeric'>{item.sum}</p>
                                 {item.note.length > 0 &&
-                                    <p className='p-gray-small' style={{ 'margin': '4px 16px' }}>{item.note}</p>
+                                    <p className='p-gray-small p-gray-small-with-margin'>{item.note}</p>
                                 }
                             </Grid>
                         ))}
@@ -188,11 +188,11 @@ export const Step7RightsDuties = () => {
                 <Card className="white-content-wrapper" >
                     <Grid container >
                         {otherServicesItems.map(item => (
-                            <Grid item xs={6} key={item.text} style={{ 'margin': '7px 0' }} >
+                            <Grid item xs={6} key={item.text} className="blue-header-list-item">
                                 <p className='p-small-blue-minmargin'>{item.text}</p>
                                 <p className='p-bold-numeric'>{item.sum}</p>
                                 {item.note.length > 0 &&
-                                    <p className='p-gray-small' style={{ 'margin': '4px 16px' }}>{item.note}</p>
+                                    <p className='p-gray-small p-gray-small-with-margin'>{item.note}</p>
                                 }
                             </Grid>
                         ))}
@@ -240,10 +240,10 @@ export const Step7RightsDuties = () => {
                     <Grid container >
                         {outgoingsItems.map(item => (
                             <Grid key={item.title} item xs={12} sm={6}>
-                                <p className='p-small-blue-minmargin' style={{ 'position': 'relative' }}>
+                                <p className='p-small-blue-minmargin' style={{ position: 'relative' }}>
                                     {item.title}
                                     {item.icon &&
-                                        <img src="/images/green_ellipse.svg" alt='Green Ellipse' style={{ 'position': 'absolute', 'top': '0', 'right': '4px' }} />
+                                        <img src="/images/green_ellipse.svg" alt='Green Ellipse' style={{ position: 'absolute', top: '0', right: '4px' }} />
                                     }
                                 </p>
                                 <p className='p-regular'>{item.text}</p>

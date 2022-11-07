@@ -120,7 +120,7 @@ export const Step10Signature = () => {
                         <Tooltip title="Clear" placement="top">
                             <UndoIcon
                                 color='disabled'
-                                style={{ 'position': 'absolute', 'top': '0', 'right': '4px' }}
+                                style={{ position: 'absolute', top: '0', right: '4px' }}
                                 onClick={clearSignature}
                             />
                         </Tooltip>
