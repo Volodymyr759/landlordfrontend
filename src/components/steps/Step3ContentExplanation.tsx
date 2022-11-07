@@ -56,7 +56,7 @@ export const Step3ContentExplanation = () => {
                 Important Information
             </p>
             <Grid item xs={12}>
-                <Card className="white-content-wrapper" style={{ 'minHeight': '600px' }} >
+                <Card className="white-content-wrapper white-content-wrapper-large">
                     <p className='text-centered'>
                         <img src="/images/Info-icon.svg" alt="Info" />
                     </p>
