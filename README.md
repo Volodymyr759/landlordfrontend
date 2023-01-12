@@ -1,8 +1,14 @@
-# Important!: use node --version v16.13.1
+Prototype of real in use feature of one of my commercial projects. 
 
-prototype of real in use feature of one of my projects, contains examples of work with redux-slices
+Contains examples of work with redux-slices.
+
+Uses Material UI design system.
+
+Online: https://landlord.dev.propertyspace.com/ 
 
 ## Available Scripts
+
+Important!: use node --version v16.13.1
 
 yarn install & yarn start
 
